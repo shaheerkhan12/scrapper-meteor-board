@@ -2,34 +2,36 @@
   <title>Meteor App</title>
 </head>
 
-<body>
-  <nav>
-    <a href="/" class="nav-link">Home</a>
-    <a href="/about" class="nav-link">About</a>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow-lg p-4">
+    <div class="container mx-auto flex gap-4">
+      <a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+      <a href="/about" class="text-blue-600 hover:text-blue-800">About</a>
+    </div>
   </nav>
   
-  <div id="main-content">
+  <div id="main-content" class="container mx-auto p-4">
     {{> home}}
   </div>
 </body>
 
 <template name="home">
-  <h1>Welcome to Meteor!</h1>
+  <h1 class="text-4xl font-bold mb-6">Welcome to Meteor!</h1>
   {{> hello}}
   {{> info}}
 </template>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click Me</button>
+  <p class="mt-2">You've pressed the button {{counter}} times.</p>
 </template>
 
 <template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  <h2 class="text-2xl font-semibold mt-8 mb-4">Learn Meteor!</h2>
+  <ul class="space-y-2">
+    <li><a href="https://www.meteor.com/try" target="_blank" class="text-blue-600 hover:text-blue-800">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank" class="text-blue-600 hover:text-blue-800">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank" class="text-blue-600 hover:text-blue-800">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank" class="text-blue-600 hover:text-blue-800">Discussions</a></li>
   </ul>
 </template>
