@@ -1,6 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import { Blaze } from 'meteor/blaze';
 
 import './main.html';
 import './pages/about.html';
@@ -9,14 +10,18 @@ import './pages/about.html';
 FlowRouter.route('/', {
   name: 'home',
   action() {
-    document.getElementById('main-content').innerHTML = Blaze.toHTMLWithData(Template.home);
+    const container = document.getElementById('main-content');
+    container.innerHTML = '';
+    Blaze.render(Template.home, container);
   }
 });
 
 FlowRouter.route('/about', {
   name: 'about',
   action() {
-    document.getElementById('main-content').innerHTML = Blaze.toHTMLWithData(Template.about);
+    const container = document.getElementById('main-content');
+    container.innerHTML = '';
+    Blaze.render(Template.about, container);
   }
 });
 
