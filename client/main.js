@@ -8,6 +8,10 @@ import './main.html';
 import './main.css';
 import './templates/home.html';
 import './templates/home.js';
+import './templates/about.html';
+
+// Initialize BlazeLayout
+BlazeLayout.setRoot('body');
 
 // Router configuration
 FlowRouter.route('/', {
