@@ -1,0 +1,20 @@
+<template name="home">
+  <h1 class="text-4xl font-bold mb-6">Welcome to Meteor!</h1>
+  {{> hello}}
+  {{> info}}
+</template>
+
+<template name="hello">
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click Me</button>
+  <p class="mt-2">You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="info">
+  <h2 class="text-2xl font-semibold mt-8 mb-4">Learn Meteor!</h2>
+  <ul class="space-y-2">
+    <li><a href="https://www.meteor.com/try" target="_blank" class="text-blue-600 hover:text-blue-800">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank" class="text-blue-600 hover:text-blue-800">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank" class="text-blue-600 hover:text-blue-800">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank" class="text-blue-600 hover:text-blue-800">Discussions</a></li>
+  </ul>
+</template>
