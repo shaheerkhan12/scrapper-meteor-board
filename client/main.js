@@ -9,6 +9,7 @@ import './main.css';
 import './templates/home.html';
 import './templates/home.js';
 import './templates/about.html';
+import './pages/about.html';
 
 // Wait for the DOM to be ready
 Meteor.startup(() => {
@@ -24,13 +25,6 @@ FlowRouter.route('/', {
   }
 });
 
-// Router configuration
-FlowRouter.route('/', {
-  name: 'home',
-  action() {
-    BlazeLayout.render('main', { content: 'home' });
-  }
-});
 
 FlowRouter.route('/about', {
   name: 'about',
