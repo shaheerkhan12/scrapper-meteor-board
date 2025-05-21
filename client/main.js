@@ -14,6 +14,7 @@ import './templates/about.html';
 Meteor.startup(() => {
   // Initialize BlazeLayout
   BlazeLayout.setRoot('body');
+});
 
 // Router configuration
 FlowRouter.route('/', {

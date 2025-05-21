@@ -15,11 +15,7 @@
     </nav>
     
     <div id="main-content" class="container mx-auto p-4">
-      {{#if content}}
-        {{> Template.dynamic template=content}}
-      {{else}}
-        <div>Loading...</div>
-      {{/if}}
+      {{> Template.dynamic template=content default="home"}}
     </div>
   </div>
 </template>
