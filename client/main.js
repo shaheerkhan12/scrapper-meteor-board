@@ -14,6 +14,8 @@ import './templates/about.html';
 Meteor.startup(() => {
   // Initialize BlazeLayout
   BlazeLayout.setRoot('body');
+  // Render initial template
+  BlazeLayout.render('main', { content: 'home' });
 });
 
 // Router configuration

@@ -15,7 +15,11 @@
     </nav>
     
     <div id="main-content" class="container mx-auto p-4">
-      {{> Template.dynamic template=content default="home"}}
+      {{#if content}}
+        {{> Template.dynamic template=content}}
+      {{else}}
+        {{> home}}
+      {{/if}}
     </div>
   </div>
 </template>
