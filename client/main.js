@@ -10,8 +10,10 @@ import './templates/home.html';
 import './templates/home.js';
 import './templates/about.html';
 
-// Initialize BlazeLayout
-BlazeLayout.setRoot('body');
+// Wait for the DOM to be ready
+Meteor.startup(() => {
+  // Initialize BlazeLayout
+  BlazeLayout.setRoot('body');
 
 // Router configuration
 FlowRouter.route('/', {
