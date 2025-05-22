@@ -8,7 +8,6 @@ import './main.html';
 import './main.css';
 import './templates/home.html';
 import './templates/home.js';
-import './templates/about.html';
 import './pages/about.html';
 
 // Wait for the DOM to be ready
@@ -28,6 +27,6 @@ FlowRouter.route('/', {
 FlowRouter.route('/about', {
   name: 'about',
   action() {
-    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'about' });
+    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'pages/about' });
   }
 });
