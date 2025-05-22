@@ -13,19 +13,27 @@ import './pages/about.html';
 // Wait for the DOM to be ready
 Meteor.startup(() => {
   // Router is automatically initialized
+  FlowRouter.route('/', {
+    name: 'main',
+    action() {
+      document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'main' });
+    }
+  });
+  
 });
 
 // Initialize router with default route
 FlowRouter.route('/home', {
   name: 'home',
   action() {
-    BlazeLayout.render('main', { content: 'home' });
+    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'home' });
   }
 });
+
 
 FlowRouter.route('/about', {
   name: 'about',
   action() {
-    BlazeLayout.render('main', { content: 'about' });
+    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'about' });
   }
 });
