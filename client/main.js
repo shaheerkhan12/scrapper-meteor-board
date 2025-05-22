@@ -16,7 +16,7 @@ Meteor.startup(() => {
 });
 
 // Initialize router with default route
-FlowRouter.route('/', {
+FlowRouter.route('/home', {
   name: 'home',
   action() {
     document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'home' });
