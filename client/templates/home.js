@@ -3,7 +3,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './home.html';
 
-Template.home.onCreated(function homeOnCreated() {
+Template.home.onCreated(function helloOnCreated() {
   this.counter = new ReactiveVar(0);
 });
 

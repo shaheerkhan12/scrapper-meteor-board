@@ -10,30 +10,31 @@ import './templates/home.html';
 import './templates/home.js';
 import './pages/about.html';
 
-// Wait for the DOM to be ready
-Meteor.startup(() => {
-  // Router is automatically initialized
-  FlowRouter.route('/', {
-    name: 'main',
-    action() {
-      document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'main' });
-    }
-  });
-  
-});
+let currentView = null;
 
-// Initialize router with default route
+function renderTemplate(templateName) {
+  // Remove previous view
+  if (currentView) {
+    Blaze.remove(currentView);
+  }
+  
+  // Render new template
+  const container = document.getElementById('content');
+  if (container) {
+    currentView = Blaze.render(Template[templateName], container);
+  }
+}
+
 FlowRouter.route('/home', {
   name: 'home',
   action() {
-    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'home' });
+    renderTemplate('home');
   }
 });
-
 
 FlowRouter.route('/about', {
   name: 'about',
   action() {
-    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'about' });
+    renderTemplate('about');
   }
 });
