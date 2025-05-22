@@ -1,5 +1,9 @@
 <head>
   <title>Meteor App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -7,16 +11,16 @@
 </body>
 
 <template name="main">
-  <div class="bg-gray-100 min-h-screen">
-    <nav class="bg-white shadow-lg p-4">
-      <div class="container mx-auto flex gap-4">
-        <a href="/home" class="text-blue-600 hover:text-blue-800">Home</a>
-        <a href="/about" class="text-blue-600 hover:text-blue-800">About</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/home">Home</a>
+        <a class="nav-item nav-link" href="/about">About</a>
       </div>
-    </nav>
-  </div>
-    <div id="main-content" class="container mx-auto p-4">
-      {{> Template.dynamic template=content}}
     </div>
+  </nav>
+  <div class="container mt-4">
+    {{> Template.dynamic template=content}}
+  </div>
   
 </template>
