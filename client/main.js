@@ -19,14 +19,13 @@ Meteor.startup(() => {
 FlowRouter.route('/home', {
   name: 'home',
   action() {
-    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'home' });
+    BlazeLayout.render('main', { content: 'home' });
   }
 });
-
 
 FlowRouter.route('/about', {
   name: 'about',
   action() {
-    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'about' });
+    BlazeLayout.render('main', { content: 'about' });
   }
 });
