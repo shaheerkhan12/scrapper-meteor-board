@@ -22,7 +22,7 @@ Meteor.startup(() => {
 FlowRouter.route('/', {
   name: 'home',
   action() {
-    BlazeLayout.render('main', { content: 'home' });
+    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'home' });
   }
 });
 
@@ -30,6 +30,6 @@ FlowRouter.route('/', {
 FlowRouter.route('/about', {
   name: 'about',
   action() {
-    BlazeLayout.render('main', { content: 'about' });
+    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'about' });
   }
 });
