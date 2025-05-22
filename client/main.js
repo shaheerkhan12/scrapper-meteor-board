@@ -27,6 +27,6 @@ FlowRouter.route('/', {
 FlowRouter.route('/about', {
   name: 'about',
   action() {
-    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'pages/about' });
+    document.body.innerHTML = Blaze.toHTMLWithData(Template.main, { content: 'about' });
   }
 });
